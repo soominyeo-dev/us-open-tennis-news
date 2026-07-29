@@ -45,63 +45,13 @@
     font-size: 2rem;
   }
   header p {
-    margin: 0 0 18px;
+    margin: 0;
     opacity: 0.85;
     font-size: 0.95rem;
   }
-  .update-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    flex-wrap: wrap;
-  }
-  .timestamp {
-    font-size: 0.85rem;
-    opacity: 0.9;
-    background: rgba(0,0,0,0.2);
-    padding: 6px 14px;
-    border-radius: 999px;
-  }
-  .timestamp strong {
-    color: var(--ball-yellow);
-  }
-  #refresh-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--ball-yellow);
-    color: var(--court-green-dark);
-    border: none;
-    font-weight: 700;
-    font-size: 0.85rem;
-    padding: 8px 18px;
-    border-radius: 999px;
-    cursor: pointer;
-    transition: transform 0.1s ease, opacity 0.1s ease;
-  }
-  #refresh-btn:hover:not(:disabled) {
-    transform: translateY(-1px);
-  }
-  #refresh-btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-  #status-message {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-    font-size: 0.85rem;
-  }
-  #status-message.error {
-    color: #b91c1c;
-    text-align: center;
-    margin-top: -20px;
-    margin-bottom: 12px;
-  }
   main {
     max-width: 800px;
-    margin: -20px auto 60px;
+    margin: -40px auto 60px;
     padding: 0 20px;
   }
   .article-list {
@@ -171,101 +121,84 @@
   <header>
     <span class="badge">🎾 GRAND SLAM NEWS</span>
     <h1>US Open 테니스 기사 모음</h1>
-    <p>Google 검색 기반 US Open 관련 최신 기사 10선</p>
-    <div class="update-bar">
-      <span class="timestamp">마지막 갱신: <strong id="last-updated">-</strong></span>
-      <button id="refresh-btn" type="button">🔄 지금 시간 기준으로 갱신</button>
-    </div>
+    <p>Google 검색 기반 US Open 관련 최신 기사 10선 (2026-07-29 기준)</p>
   </header>
-  <p id="status-message"></p>
   <main>
-    <ol class="article-list" id="article-list"></ol>
+    <ol class="article-list">
+      <li><a href="https://www.usopen.org/en_US/news/articles/2026-07-27/team_entries_announced_for_2026_us_open_mixed_doubles_championship.html" target="_blank" rel="noopener noreferrer">
+        <span class="rank">1</span>
+        <span class="article-info">
+          <p class="article-title">Team entries announced for 2026 US Open Mixed Doubles Championship</p>
+          <span class="article-source">usopen.org</span>
+        </span>
+      </a></li>
+      <li><a href="https://www.atptour.com/en/news/us-open-2026-entry-list" target="_blank" rel="noopener noreferrer">
+        <span class="rank">2</span>
+        <span class="article-info">
+          <p class="article-title">Jannik Sinner, Carlos Alcaraz headline US Open field; Who else is on the entry list?</p>
+          <span class="article-source">atptour.com</span>
+        </span>
+      </a></li>
+      <li><a href="https://www.si.com/onsi/serve/news/5-stars-left-off-2026-us-open-entry-list" target="_blank" rel="noopener noreferrer">
+        <span class="rank">3</span>
+        <span class="article-info">
+          <p class="article-title">5 Stars Left Off 2026 U.S. Open Entry List</p>
+          <span class="article-source">si.com</span>
+        </span>
+      </a></li>
+      <li><a href="https://pragativadi.com/djokovic-and-sabalenka-join-forces-for-us-open-2026-mixed-doubles/" target="_blank" rel="noopener noreferrer">
+        <span class="rank">4</span>
+        <span class="article-info">
+          <p class="article-title">Djokovic, Sabalenka Join Forces for US Open 2026 Mixed Doubles</p>
+          <span class="article-source">pragativadi.com</span>
+        </span>
+      </a></li>
+      <li><a href="https://www.wtatennis.com/tournaments/905/us-open/2026" target="_blank" rel="noopener noreferrer">
+        <span class="rank">5</span>
+        <span class="article-info">
+          <p class="article-title">US Open 2026 Overview</p>
+          <span class="article-source">wtatennis.com</span>
+        </span>
+      </a></li>
+      <li><a href="https://www.lta.org.uk/fan-zone/grand-slam/us-open/" target="_blank" rel="noopener noreferrer">
+        <span class="rank">6</span>
+        <span class="article-info">
+          <p class="article-title">US Open Tennis Tournament 2026: Schedule &amp; Results</p>
+          <span class="article-source">lta.org.uk</span>
+        </span>
+      </a></li>
+      <li><a href="https://www.usopen.org/en_US/about/eventschedule.html" target="_blank" rel="noopener noreferrer">
+        <span class="rank">7</span>
+        <span class="article-info">
+          <p class="article-title">Official Site of the 2026 US Open Tennis Championships — Event Schedule</p>
+          <span class="article-source">usopen.org</span>
+        </span>
+      </a></li>
+      <li><a href="https://www.newyorkwelcome.net/news/us-open-2026-official-dates.htm" target="_blank" rel="noopener noreferrer">
+        <span class="rank">8</span>
+        <span class="article-info">
+          <p class="article-title">US Open 2026 Dates Announced: Official Schedule Revealed</p>
+          <span class="article-source">newyorkwelcome.net</span>
+        </span>
+      </a></li>
+      <li><a href="https://www.sportbusy.com/us-open-tennis-2026" target="_blank" rel="noopener noreferrer">
+        <span class="rank">9</span>
+        <span class="article-info">
+          <p class="article-title">US Open Tennis 2026 Dates — Schedule, Draw &amp; How to Watch</p>
+          <span class="article-source">sportbusy.com</span>
+        </span>
+      </a></li>
+      <li><a href="https://www.usopen.org/index.html" target="_blank" rel="noopener noreferrer">
+        <span class="rank">10</span>
+        <span class="article-info">
+          <p class="article-title">Official Site of the 2026 US Open Tennis Championships</p>
+          <span class="article-source">usopen.org</span>
+        </span>
+      </a></li>
+    </ol>
   </main>
   <footer>
-    갱신 버튼은 Google Custom Search API를 통해 실시간 검색 결과를 가져옵니다
+    2026-07-29 기준 Google 검색 결과로 생성된 정적 페이지
   </footer>
-
-<script>
-  // 최초 페이지 생성 시 검색해 둔 기본 링크 (서버 API 연동 전 폴백/초기 데이터)
-  const initialItems = [
-    { title: "Team entries announced for 2026 US Open Mixed Doubles Championship", link: "https://www.usopen.org/en_US/news/articles/2026-07-27/team_entries_announced_for_2026_us_open_mixed_doubles_championship.html", source: "usopen.org" },
-    { title: "Jannik Sinner, Carlos Alcaraz headline US Open field; Who else is on the entry list?", link: "https://www.atptour.com/en/news/us-open-2026-entry-list", source: "atptour.com" },
-    { title: "5 Stars Left Off 2026 U.S. Open Entry List", link: "https://www.si.com/onsi/serve/news/5-stars-left-off-2026-us-open-entry-list", source: "si.com" },
-    { title: "Djokovic, Sabalenka Join Forces for US Open 2026 Mixed Doubles", link: "https://pragativadi.com/djokovic-and-sabalenka-join-forces-for-us-open-2026-mixed-doubles/", source: "pragativadi.com" },
-    { title: "US Open 2026 Overview", link: "https://www.wtatennis.com/tournaments/905/us-open/2026", source: "wtatennis.com" },
-    { title: "US Open Tennis Tournament 2026: Schedule & Results", link: "https://www.lta.org.uk/fan-zone/grand-slam/us-open/", source: "lta.org.uk" },
-    { title: "Official Site of the 2026 US Open Tennis Championships — Event Schedule", link: "https://www.usopen.org/en_US/about/eventschedule.html", source: "usopen.org" },
-    { title: "US Open 2026 Dates Announced: Official Schedule Revealed", link: "https://www.newyorkwelcome.net/news/us-open-2026-official-dates.htm", source: "newyorkwelcome.net" },
-    { title: "US Open Tennis 2026 Dates — Schedule, Draw & How to Watch", link: "https://www.sportbusy.com/us-open-tennis-2026", source: "sportbusy.com" },
-    { title: "Official Site of the 2026 US Open Tennis Championships", link: "https://www.usopen.org/index.html", source: "usopen.org" }
-  ];
-  const initialFetchedAt = "2026-07-29T00:00:00+09:00";
-
-  const listEl = document.getElementById("article-list");
-  const timestampEl = document.getElementById("last-updated");
-  const statusEl = document.getElementById("status-message");
-  const refreshBtn = document.getElementById("refresh-btn");
-
-  function renderArticles(items) {
-    listEl.innerHTML = "";
-    items.slice(0, 10).forEach((item, index) => {
-      const li = document.createElement("li");
-      const a = document.createElement("a");
-      a.href = item.link;
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
-      a.innerHTML = `
-        <span class="rank">${index + 1}</span>
-        <span class="article-info">
-          <p class="article-title"></p>
-          <span class="article-source"></span>
-        </span>
-      `;
-      a.querySelector(".article-title").textContent = item.title;
-      a.querySelector(".article-source").textContent = item.source;
-      li.appendChild(a);
-      listEl.appendChild(li);
-    });
-  }
-
-  function updateTimestamp(isoString) {
-    const date = new Date(isoString);
-    timestampEl.textContent = date.toLocaleString("ko-KR", {
-      timeZone: "Asia/Seoul",
-      dateStyle: "medium",
-      timeStyle: "short",
-    });
-  }
-
-  function setStatus(message, isError) {
-    statusEl.textContent = message || "";
-    statusEl.className = isError ? "error" : "";
-  }
-
-  async function refreshArticles() {
-    refreshBtn.disabled = true;
-    refreshBtn.textContent = "⏳ 검색 중...";
-    setStatus("", false);
-    try {
-      const res = await fetch("/api/search");
-      const data = await res.json();
-      if (!res.ok) {
-        throw new Error(data.error || "검색 결과를 가져오지 못했습니다.");
-      }
-      renderArticles(data.items);
-      updateTimestamp(data.fetchedAt);
-      setStatus("최신 검색 결과로 갱신되었습니다.", false);
-    } catch (err) {
-      setStatus("⚠ " + err.message, true);
-    } finally {
-      refreshBtn.disabled = false;
-      refreshBtn.textContent = "🔄 지금 시간 기준으로 갱신";
-    }
-  }
-
-  renderArticles(initialItems);
-  updateTimestamp(initialFetchedAt);
-  refreshBtn.addEventListener("click", refreshArticles);
-</script>
 </body>
 </html>
