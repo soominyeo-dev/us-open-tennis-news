@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>US Open 테니스 뉴스</title>
 <style>
+  @font-face {
+    font-family: 'NostalgicCocochoitoon';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-1@1.0/Griun_Cocochoitoon-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+  }
   :root {
     --court-green: #2b5d34;
     --court-green-dark: #1e4526;
@@ -17,15 +23,15 @@
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    font-family: "Segoe UI", "Malgun Gothic", sans-serif;
-    background: linear-gradient(180deg, var(--court-green) 0%, var(--court-green-dark) 260px, #f2f4ef 260px);
+    font-family: 'NostalgicCocochoitoon', "Segoe UI", "Malgun Gothic", sans-serif;
+    background: linear-gradient(180deg, var(--court-green) 0%, var(--court-green-dark) 300px, #f2f4ef 300px);
     color: var(--text-dark);
     min-height: 100vh;
   }
   header {
     max-width: 800px;
     margin: 0 auto;
-    padding: 48px 20px 24px;
+    padding: 48px 20px 48px;
     text-align: center;
     color: var(--text-light);
   }
@@ -48,10 +54,11 @@
     margin: 0;
     opacity: 0.85;
     font-size: 0.95rem;
+    line-height: 1.6;
   }
   main {
     max-width: 800px;
-    margin: -40px auto 60px;
+    margin: -20px auto 60px;
     padding: 0 20px;
   }
   .article-list {
